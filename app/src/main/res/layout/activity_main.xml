@@ -16,14 +16,64 @@
             android:id="@+id/startButton"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Press to get data"/>
-
-        <TextView
-            android:id="@+id/acknowledgement"
+            android:text="Man 3 Days"/>
+        <Button
+            android:id="@+id/ManWeek"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:text="Contains BBC weather data from public RSS"/>
+            android:text="Man Week"/>
+        <Button
+            android:id="@+id/Glas3days"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="glas 3 days"/>
+        <Button
+            android:id="@+id/glasLatest"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="glas latest"/>
+        <Button
+            android:id="@+id/lon3day"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Lon 3 day"/>
+        <Button
+            android:id="@+id/lonLatest"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Lon latest"/>
+        <Button
+            android:id="@+id/NY3day"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="NY3Day"/>
+        <Button
+            android:id="@+id/NYLatest"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="NY latest"/>
+        <Button
+            android:id="@+id/Oman3Day"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Oman 3 Day"/>
+        <Button
+            android:id="@+id/OmanLatest"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Oman latest"/>
+        <Button
+            android:id="@+id/Mar3day"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Mar3Day"/>
+        <Button
+            android:id="@+id/MarLatest"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text=" Mar Latest"/>
+
+
 
         <TextView
             android:id="@+id/rawDataDisplay"

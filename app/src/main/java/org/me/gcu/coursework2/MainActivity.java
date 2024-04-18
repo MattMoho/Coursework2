@@ -33,13 +33,15 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.LinkedList;
 
-public class MainActivity extends AppCompatActivity implements OnClickListener
+public class MainActivity extends AppCompatActivity
 {
     private TextView rawDataDisplay;
-    private Button startButton;
+    private Button startButton, ManLatest, Glas3Day, GlasLatest, Lon3Day, LonLatest, NY3Day, NYLatest, Oman3Day, OmanLatest, Mar3Day, MarLatest;
+
     private String result;
     private String url1="";
-    private String urlSource="https://weather-broker-cdn.api.bbci.co.uk/en/forecast/rss/3day/2643123";
+
+    private String urlSource;
 
     private LinkedList<WeatherData> weatherList;
 
@@ -52,16 +54,100 @@ public class MainActivity extends AppCompatActivity implements OnClickListener
         // Set up the raw links to the graphical components
         rawDataDisplay = (TextView)findViewById(R.id.rawDataDisplay);
         startButton = (Button)findViewById(R.id.startButton);
-        startButton.setOnClickListener(this);
+        ManLatest = (Button)findViewById(R.id.ManWeek);
+        Glas3Day = (Button)findViewById(R.id.Glas3days);
+        GlasLatest = (Button)findViewById(R.id.glasLatest);
+        Lon3Day = (Button)findViewById(R.id.lon3day);
+        LonLatest = (Button)findViewById(R.id.lonLatest);
+        NY3Day = (Button)findViewById(R.id.NY3day);
+        NYLatest = (Button)findViewById(R.id.NYLatest);
+        Oman3Day = (Button)findViewById(R.id.Oman3Day);
+        OmanLatest = (Button)findViewById(R.id.OmanLatest);
+        Mar3Day = (Button)findViewById(R.id.Mar3day);
+        MarLatest = (Button)findViewById(R.id.MarLatest);
+        startButton.setOnClickListener(new View.OnClickListener() {
+                                           @Override
+                                           public void onClick(View view) {
+                                               urlSource="https://weather-broker-cdn.api.bbci.co.uk/en/forecast/rss/3day/2643123";
+                                               startProgress();
+                                           }
+
+                                       });
+        ManLatest.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+                urlSource = "https://weather-broker-cdn.api.bbci.co.uk/en/observation/rss/2643123";
+                startProgress();
+            }
+        });
+        Glas3Day.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+                urlSource = "https://weather-broker-cdn.api.bbci.co.uk/en/forecast/rss/3day/2648579";
+                startProgress();
+            }
+        });
+        GlasLatest.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+                urlSource = "https://weather-broker-cdn.api.bbci.co.uk/en/observation/rss/2648579";
+                startProgress();
+            }
+        });
+        Lon3Day.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+                urlSource = "https://weather-broker-cdn.api.bbci.co.uk/en/forecast/rss/3day/2643743";
+                startProgress();
+            }
+        });
+        LonLatest.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+                urlSource = "https://weather-broker-cdn.api.bbci.co.uk/en/observation/rss/2643743";
+                startProgress();
+            }
+        });
+        NY3Day.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+                urlSource = "https://weather-broker-cdn.api.bbci.co.uk/en/forecast/rss/3day/5128581";
+                startProgress();
+            }
+        });
+        NYLatest.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+                urlSource = "https://weather-broker-cdn.api.bbci.co.uk/en/observation/rss/5128581";
+                startProgress();
+            }
+        });
+        Oman3Day.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+                urlSource = "https://weather-broker-cdn.api.bbci.co.uk/en/forecast/rss/3day/287286";
+                startProgress();
+            }
+        });
+        OmanLatest.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+                urlSource = "https://weather-broker-cdn.api.bbci.co.uk/en/observation/rss/287286";
+                startProgress();
+            }
+        });
+        Mar3Day.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+                urlSource = "https://weather-broker-cdn.api.bbci.co.uk/en/forecast/rss/3day/934154";
+                startProgress();
+            }
+        });
+        MarLatest.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+                urlSource = "https://weather-broker-cdn.api.bbci.co.uk/en/observation/rss/934154";
+                startProgress();
+            }
+        });
+
         weatherList = new LinkedList<WeatherData>();
 
         // More Code goes here
     }
 
-    public void onClick(View aview)
-    {
-        startProgress();
-    }
+
+
+
 
     public void startProgress()
     {
