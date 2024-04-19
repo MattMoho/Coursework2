@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Coursework2</string>
+    <!-- to toggle the open close button of the navigation drawer -->
 </resources>

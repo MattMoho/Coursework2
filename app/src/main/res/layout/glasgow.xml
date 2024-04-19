@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="horizontal"
+    android:background="@color/Aqua">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/ThreeDayLayout"
+        tools:layout_editor_absoluteX="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Latest Observation"/>
+
+        <!-- Date TextView -->
+        <TextView
+            android:id="@+id/textView_date_latest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Weather Icon ImageView -->
+        <ImageView
+            android:id="@+id/imageView_weather_icon_latest"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="fitXY"
+
+            android:src="@drawable/cloudy" /> <!-- Placeholder icon, replace with actual weather icons -->
+
+
+        <!-- Temperature TextView -->
+        <TextView
+            android:id="@+id/textView_temperature_latest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Temperature"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/next_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:onClick="onNextButtonClick"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Glasgow"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ThreeDayLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:layout_editor_absoluteX="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:layout_editor_absoluteY="128dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="3 Day Forecast"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+        <!-- Date TextView -->
+        <TextView
+            android:id="@+id/textView_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:paddingHorizontal="20dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_weight="1"/>
+    <TextView
+        android:id="@+id/textView_date2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingHorizontal="20dp"
+        android:layout_weight="1"/>
+    <TextView
+        android:id="@+id/textView_date3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:paddingHorizontal="20dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_weight="1"/>
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Weather Icon ImageView -->
+        <ImageView
+            android:id="@+id/imageView_weather_icon"
+
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="fitXY"
+
+
+            android:src="@drawable/cloudy"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/imageView_weather_icon2"
+
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="fitXY"
+
+
+            android:src="@drawable/cloudy"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/imageView_weather_icon3"
+
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="fitXY"
+
+
+            android:src="@drawable/cloudy"
+            android:layout_weight="1"
+
+            /><!-- Placeholder icon, replace with actual weather icons -->
+
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <!-- Temperature TextView -->
+        <TextView
+            android:id="@+id/textView_temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Min/Max"
+            android:textSize="10dp"
+            android:layout_weight="1"
+            />
+            <TextView
+                android:id="@+id/textView_temperature2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Min/Max"
+                android:textSize="10sp"
+                android:layout_weight="1"/>
+            <TextView
+                android:id="@+id/textView_temperature3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Min/Max"
+                android:textSize="10sp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
